@@ -17,15 +17,13 @@ struct ContentView: View {
                     HStack {
                         Circle()
                             .fill(Color.blue)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 55, height: 55)
                             .overlay(
-                                Image(systemName: "person.fill")
+                                Image("perfil")
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(Color(UIColor.white))
-                                    .padding(10)
+                                    .aspectRatio(contentMode: .fill) // Faz a imagem preencher o círculo
                             )
-                            .clipShape(Circle())
+                            .clipShape(Circle()) // Garante que a imagem siga a forma do círculo
                         VStack(alignment: .leading) {
                             Text("Pedro Braz")
                                 .font(.headline)
